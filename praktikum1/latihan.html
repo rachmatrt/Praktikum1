@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Praktikum</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+<div>
+    
+        <input type="text" name="txtnim" placeholder="nim" />
+        <input type="text" name="txtnama" placeholder="nama"/>
+        <input type="text" name="txtnilai" placeholder="nilai"/>
+        <input type="submit" id="savenilai" value="save"></button>
+    
+</div>
+<div class="table-responsive">
+    <table class="table table-striped" id="tbsiswa" border="1px">
+        <tr>
+            <td name="txtnim">Nim</td>
+            <td name="txtnama">Nama</td>
+            <td name="txtnilai">Nilai</td>
+        </tr>
+    </table>
+</div>
+  </body>
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</html>
+
+<script type="text/javascript">
+    $("#savenilai").click(function(){
+        
+        $("#tbsiswa").append("<tr> <td>"+$("input[name=txtnim]").val()+
+            "</td> <td>"+$("input[name=txtnama]").val()+
+            "</td> <td>"+$("input[name=txtnilai]").val()+
+            "</td> </tr>");
+    });
+</script>       

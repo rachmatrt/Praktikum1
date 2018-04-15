@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Praktikum</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+<body>    
+    <!--StartHeader-->
+<nav class="navbar navbar-default navbar-static-top" id="header" style=" margin-bottom: 0px">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+    <a href="index.html" class="navbar-brand"> Project Name</a>
+  </div>  
+  </div>
+</nav>
+    <!--EndHeader-->
+    
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-xs-12" style="border: 1px solid;margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;">
+    <!--StartMenu-->
+    <div id="navbar" class="col-sm-2 col-md-2 col-xs-2 " style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;background-color: #E6E6FA" >
+      <div class="navbar-collapse collapse " style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px; position: fixed;">
+        <ul class="nav nav-sidebar">
+          <li class="active"><a href="#dash">Dashboard</a></li>
+          <li class="active"><a href="#dapes">Data Peserta</a></li>
+          <li class="active"><a href="#dalai">Data Nilai</a></li>
+          <li class="active"><a href="#header">keatas</a></li>
+      </ul>
+      </div>
+    </div>
+    <!--EndMenu-->
+
+    <!--StartContent-->
+    <div class="col-sm-10 col-xs-10 col-md-10 main" style="border: 1px solid">
+      <section id="dash" style="height: 900px">
+        <div style="border-bottom: 1px solid">
+          <h1>Dashboard</h1>
+        </div>
+          <div>
+          
+          </div>
+      </section>
+      <section id="dapes" style="height: 900px">
+        <div style="border-bottom: 1px solid; ">
+          <h1>Data Peserta</h1>
+        </div>
+        <div style="padding-top: 5px;">
+          <input type="number" name="nim" placeholder="Nim" required>
+          <input type="text" name="nama" placeholder="Nama" required>
+          <input type="text" name="prodi" placeholder="prodi" required>
+          <button class="btn btn-primary" id="savepes"> Simpan </button>
+        </div>
+        <div class="table-responsive">
+          <table id="tbpes" class="table table-striped">
+            <tr>
+              <td name="nim" > Nim </td>
+              <td name="nama" > Nama </td>
+              <td name="prodi" > Prodi </td>
+            </tr>
+          </table>
+        </div>
+      </section> 
+      <section id="dalai" style="height: 900px">
+        <div style="border-bottom: 1px solid;">
+          <h1>Data Nilai</h1>
+        </div>
+        <div style="padding-top: 5px;">
+          <input type="number" name="math" placeholder="matematika" required>
+          <input type="number" name="indo" placeholder="indonesia" required>
+          <input type="number" name="ing" placeholder="inggris" required>
+          <button class="btn btn-primary" id="savenil"> Simpan </button>
+        </div>
+        <div class="table-responsive">
+          <table id="tbnil" class="table table-striped">
+            <tr>
+              <td name="math" > Matematika </td>
+              <td name="indo" > Bahasa Indonesia </td> 
+              <td name="ing" > Inggris </td>
+              <td name="rata" > rata-rata </td>
+              <td name="ipk" > ipk </td>            
+            </tr>
+          </table>
+        </div>
+      </section> 
+    </div>
+    <!--EndContent-->
+    </div>
+  </div>
+</div>
+        
+    <!--StartFooter-->
+<nav class="navbar navbar-default navbar-static-bottom" style=" margin-bottom: 0px">
+      <div class="container-fluid">
+        <div class="navbar-footer">
+    <a href="index.html"> Footer Project</a>
+  </div>  
+  </div>
+</nav>
+
+    <!--EndFooter-->
+   
+  </body>
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
+   <!--input mhs--> 
+<script type="text/javascript">
+  $("#savepes").click(function(){
+    $("#tbpes").append("<tr> <td>"+$("input[name=nim]").val()+"</td> <td>"+$("input[name=nama]").val()+"</td> <td>"+$("input[name=prodi]").val()+"</td> </tr>");
+  });
+</script>
+<script type="text/javascript">
+var math1 = document.getElementsByName("math");
+var indo1 = document.getElementsByName("indo");
+var ing1 = document.getElementsByName("ing");
+var rata1 = (math1 + indo1 + ing1) / 3;
+var ipk1 = rata1 / 25;
+
+  $("#savenil").click(function(){
+    $("#tbnil").append("<tr> <td>"+$("input[name=math]").val()+"</td> <td>"+$("input[name=indo]").val()+"</td> <td>"+$("input[name=ing]").val()+"</td> <td>"+$("rata1").val()+"</td> <td>"+$("ipk1").val()+"</td> </tr>");
+  });
+</script>
+
+   <!--/input mhs-->   
