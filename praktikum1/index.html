@@ -125,14 +125,14 @@
   });
 </script>
 <script type="text/javascript">
-var math1 = document.getElementsByName("math");
-var indo1 = document.getElementsByName("indo");
-var ing1 = document.getElementsByName("ing");
-var rata1 = (math1 + indo1 + ing1) / 3;
-var ipk1 = rata1 / 25;
 
   $("#savenil").click(function(){
-    $("#tbnil").append("<tr> <td>"+$("input[name=math]").val()+"</td> <td>"+$("input[name=indo]").val()+"</td> <td>"+$("input[name=ing]").val()+"</td> <td>"+$("rata1").val()+"</td> <td>"+$("ipk1").val()+"</td> </tr>");
+var math1 = parseInt($("input[name='math']").val());
+var indo1 = parseInt($("input[name='indo']").val());
+var ing1 = parseInt($("input[name='ing']").val());
+var rata1 = (math1 + indo1 + ing1) / 3;
+var ipk1 = rata1 / 25;
+  $("#tbnil").append("<tr> <td>"+$("input[name=math]").val()+"</td> <td>"+$("input[name=indo]").val()+"</td> <td>"+$("input[name=ing]").val()+"</td> <td>"+rata1+"</td> <td>"+ipk1+"</td> </tr>");
   });
 </script>
 
