@@ -1,0 +1,44 @@
+.normalku{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+
+.listku{
+	border-bottom: 1px solid;
+	border-top: 1px solid;
+	border-color: #ffffff;
+	font-size: 15px;
+}
+a{
+	color:#000000;
+ 	text-decoration:none;
+}
+a:hover{
+	background-color: #ffffff ;
+	text-decoration:none;
+}
+ 
+.contentku{
+	height: 900px;
+ 	margin-top: 5%;
+}
+
+.headerku{
+ 	background-color: #62d0ff; 
+ 	position: fixed; 
+ 	width: 100%; 
+ 	z-index: 1;
+ }
+
+.charitem:hover{
+	background-color: #ffffff ;
+}
+ .charitem{
+ 	
+ 	font-size: 20px;
+ 	margin-top: 4%;
+ 	margin-left: 10%;
+ 	margin-right: 10%;
+ 	margin-bottom: 4%;
+ }
